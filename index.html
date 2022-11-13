@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Assignment
+        </title>
+        <style>
+            .horz{
+                background-color: black;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .vert{
+                background-color: darkgoldenrod;
+                position: absolute;
+            
+                
+            }
+            
+            .bh1{
+                background-color: pink;
+                width:100px;
+                height:100px;
+            }
+            .bh2{
+                background-color: red;
+                width:100px;
+                height:100px;
+            }
+            .bh3{
+                background-color: darkturquoise;
+                width:100px;
+                height:100px;
+            }
+            .bv1{
+                background-color: blue;
+                width:100px;
+                height:100px;
+            }
+            .bv2{
+                background-color: crimson;
+                width:100px;
+                height:100px;
+            }
+            .bv3{
+                background-color: beige;
+                width:100px;
+                height:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="index.js"></script>
+        <h1 style="text-align:center ;">Assignment: 1</h1>
+        <p>1. The "var" and "function" are known as <b> Keywords </b>
+        <br> For creating variables and functions we use var and function keywords.</p>
+        <p>2. Which of these is a correct output for the JavaScript code given below?
+        <br>string X = "Hey";
+        <br>string Y = "There";
+        <br>alert(X+Y);
+         <br>
+         Answer: Undefined
+         <br>
+         Because variables are not declared using string keyword.</p>
+        <p>3.Which of these is known as Equality operator used for checking whether both the values are equal?
+        <br>Answer: ==
+        <br>"==" operator used to check whether values are equal or not and "===" is used to check whether data types and values of both the variables are same or not.
+        </p>
+        <p>4.function sayHi(){
+            <br>cosole.log(name);
+            <br>console.log(age);
+            <br>var name = "Lydia"
+            <br>let age = 21;
+            <br> }
+            <br>sayHi()
+            <br>Answer: undefined and ReferenceError
+            <br>when a variable is declared using let , we cant use that same varible before initialization.And  var "name" is not defined before using it.
+        </p>
+        <p>5. for(var i = 0; i < 3; i++) {
+            <br>setTimeout(()=> console.log(i),1)
+             <br>}
+           <br>for(let i= 0; i< 3 ;i++){
+            <br>setTimeout(()=> console.log(i),1)
+            <br>}
+            <br>Answer: 
+         </p>
+         <p>6. function Person (firstName, lastName)
+            <br> {
+            <br> this.firstName = firstName;
+            <br> this.lastName = lastName;    
+            <br> }
+            <br>const lydia =new Person('Lydia','Hallie');
+            <br>const sarah = Person('sarah','Smith');
+            <br>console.log(lydia);
+            <br>console.log(sarah);
+            <br>
+            <br>Answer: Person {firstName: "Lydia",lastName:"Hallie"} and undefined
+            <br>Reason: In first case lydia object is created for function Person using new keyword which is syntactically correct and passed "Lydia" and "Hallie" as arguments whereas in second case sarah object is created which is syntactically incorrect so it results in undefined object being called.
+         </p>
+         <p>7. function sum(a,b){
+             <br>   return a+b;
+           <br>       }
+           <br>     sum(1,'2');
+     
+         </p>
+         <p>8. let number =0;
+            <br>console.log(number++);
+            <br>console.log(++number);
+            <br>console.log(number);
+            <br>Answer: 0 2 2
+            <br>Reason: This will be explained using pre-increment and post-increment.
+         </p>
+         <p>9. var num =8;
+            <br>   var num= 10;
+            <br>   console.log(num);
+            <br> Answer: 10
+            <br> Reason: Here varible "num" is updated as 10 before being consoled.
+         </p>
+         <p>10. const obj ={a: 'one', b:'two', a: 'three'};
+            <br>    console.log(obj);
+            <br>  Answer: {a:'three', b:'two'}
+            <br> Reason: objects store the most recent values.
+         </p>
+         <p>11. Output of code
+            <br>  var text ='outside';
+            <br>  function logIt(){
+            <br>    console.log(text);
+            <br>    var text = "inside";
+            <br>  }
+            <br>  logIt();
+            <br> Answer: undefined.
+            <br> Reason: As function "logIt" is initialized it checks for "text" and finds it is ot defined before using it.
+
+         </p>
+         <p>13.What is call, apply, bind explain this with the help of example.
+            <br> Call:with call() we can use methods of other functions without being defined in using function
+            <br> Apply: apply() is same as call() but there is difference between them in terms of passing arguments. apply() takes arguments as array , call() can accept individual arguments.
+            <br> Bind: By using bind(), we borrow a method of one functio for another function.
+            <br>Example: var person = {
+             <br>   fullName: function() {
+             <br>     return this.firstName + " " + this.lastName;
+             <br>   }
+             <br> }
+              
+             <br> var person1 = {
+             <br>   firstName: "kavya",
+             <br>   lastName: "B"
+             <br> }
+              
+             <br> // This will return "Kavya B":
+             <br> person.fullName.apply(person1); 
+            <br>  person.fullName.call(person1);
+            <br>  let fullName = person.fullName.bind(member);
+             <br> console.log(fullName())
+
+        </p>
+        <p>
+            14) Explain Hoisting with example.
+            <br> In java script all declared varibles are moved to the top of the current scope i.e we can use some of the variables before being declared.
+            <br> For example, x = 5;
+            <br>  console.log(x);// Here x =5 
+            <br>  var x;
+            <br> But we cant the same using let or const 
+        </p>
+        <p>
+            15) Output of this code:
+            <br>   var length =10;
+            <br>   function fn(){
+            <br>    console.llog(this.length);
+            <br>   }
+            <br>   var obj ={
+            <br>    length =5;
+            <br>    method:function(fn){
+            <br>        fn();
+            <br>        arguments[0]();
+            <br>    }
+            <br>   };
+            <br>   obj.method(fn,1);
+            <br>Output: 10 
+            <br>        2
+
+        </p>
+        <p>
+            16)What would following code return 
+            <br> console.log(typeof typeof 1);
+            <br> Answer: String.
+        </p>
+        <p>18)
+            <h1>Check whether the number is palindrome or not</h1>
+        <button onclick="palin()">Click Here</button>
+        <p id ='pali'></p>
+        </p>
+        <p> 20) Write a piece of code to center a div vertically and horizontally.</p>
+        <div class="horz">
+            <div class="bh1">
+                Box1 Horizontally
+            </div>
+            <div class="bh2">
+                Box2 horizontally
+            </div>
+            <div class="bh3">
+                Box3 Horizontally
+            </div>
+        </div>
+        <div class="vert">
+            <div class="bv1">
+                Box1 vertically
+            </div>
+            <div class="bv2">
+                Box2 vertically
+            </div>
+            <div class="bv3">
+                Box3 vertically
+            </div>
+        </div>
+
+         
+    </body>
+</html>
